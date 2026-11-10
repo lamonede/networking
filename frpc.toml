@@ -1,0 +1,23 @@
+serverAddr = ip
+serverPort = port
+
+transport.tls.enable = true
+
+auth.method = "token"
+auth.token = key
+
+[[visitors]]
+name = "home_remote_visitor"
+type = "stcp"
+serverName = "home_remote"
+secretKey = key
+bindAddr = "127.0.0.1"
+bindPort = port
+
+[[visitors]]
+name = "home_ssh_visitor"
+type = "stcp"
+serverName = "home_ssh_stcp"
+secretKey = key
+bindAddr = "127.0.0.1"
+bindPort = port
